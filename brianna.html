@@ -1,0 +1,67 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="assets/styles.css">
+        <script src="js/brianna.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <div id="welcome_screen" class="welcome_screen">
+            <h1>Welcome to the first time set up!</h1><br>
+            <h2>You can go through the full setup here <button onclick="move_to('welcome_screen', 'add_region')">Full Setup</button></h2>
+            <h2>or setup specific things:</h2>
+            <button onclick="move_to('welcome_screen', 'add_region')">Add Region</button>
+            <button onclick="move_to('welcome_screen', 'add_workpost')">Add Workpost</button>
+            <button onclick="move_to('welcome_screen', 'add_worker')">Add Worker</button>
+        </div>
+        <div id="add_region" class="set_up">
+            <h1>Add Regions</h1>
+            <h3>if your work posts are spread over a large area, this is the time to divide them into regions!</h3>
+            Name of region: <input id="region_name" type="text"><br>
+            <button onclick="add_region()">Add Region</button>
+            <button onclick="move_to('add_region', 'add_workpost')">Next</button>
+        </div>
+        <div id="add_workpost" class="set_up">
+            <h1>Add Workpost</h1>
+            Name: <input id="workpost_name" type="text"><br>
+            Location: <input id="workpost_location" type="text"><br>
+            Shift Manager: <input id="shift_managers" type="text"><br>
+            Number Of workers: <input id="workers_amount" type="text"><br>
+            Region: <select id="region_id"></select><br>
+            <button onclick="move_to('add_workpost', 'add_region')">Back to regions</button>
+            <button onclick="add_workpost()">Add Workpost</button>
+            <button onclick="move_to('add_workpost', 'add_worker')">Next</button>
+        </div>
+        <div id="add_worker" class="set_up">
+            <h1>Add Worker</h1>
+            First Name: <input id="add_worker_first_name" type="text"><br>
+            Last Name: <input id="add_worker_last_name" type="text"><br>
+            National Id: <input id="add_worker_national_id" type="text"><br>
+            <button onclick="move_to('add_worker', 'add_workpost')">Back to workposts</button>
+            <button onclick="add_worker()">Add Worker</button>
+        </div>
+        <div id="add_worker_personal_details" class="set_up">
+            <h1>Add <span id="workerName">Workers</span> Personal Details</h1>
+            Address: <input id="add_worker_streetname" type="text" placeholder="Street Name">
+            <input id="add_worker_number" type="text" placeholder="Number">
+            <input id="add_worker_city" type="text" placeholder="City"><br>
+            Phone Number: <input id="add_worker_phone_number" type="text"><br>
+            Additional Details: <input id="add_worker_additional_details" type="text" placeholder="Up to 250 Characters" value=" "><br>
+            <button onclick="add_worker_personal_details()">Add Personal Details</button>
+        </div>
+        <div id="add_worker_work_details" class="set_up">
+            <h1>Add Workers Work Details</h1>
+            Transport: <select id = "add_worker_transport">
+                            <option value = "self">self</option>
+                            <option value = "transport">transport</option>
+                       </select><br>
+            Status: <input id="add_worker_status" type="text"><br>
+            Rank: <select id = "add_worker_rank">
+                <option value = "worker">Worker</option>
+                <option value = "shiftsetter">Shift setter</option>
+                <option value = "boss">Boss</option>
+           </select><br>
+            Main Work Post: <select id = "add_worker_postId"></select><br>  
+            <button onclick="add_worker_work_details()">Add Work Details</button>
+        </div>
+    </body>
+</html>

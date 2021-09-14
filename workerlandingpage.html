@@ -1,0 +1,65 @@
+<html>
+    <meta charset="utf-8">
+    <head>
+        <link rel="stylesheet" href="assets/landingpagestyles.css">
+        <script src="js/brianna.js"></script>
+    </head>
+    <body onload="checkForSM()">
+        <header id="toppart" class="toppart">
+            <div id="top_right_logo" >
+                <h1>Brianna</h1>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Dave</button>
+                <div class="dropdown-content">
+                  <a href="#">Settings</a>
+                  <a href="briannalogin.html">Sign Out</a>
+                </div>
+              </div>
+            
+        </header>
+        <button class="openbtn" onclick="openNav()">☰ Options</button>
+        <div id="sidepart" class="sidebar">
+            <h1>Options</h1><hr>
+            <a href="javascript:void(0)" class="side_option" onclick="closeNav()">×</a>
+            <div id="option_current_shifts" class="side_option" onclick="workermainpart('current_shifts')">
+                <h2>Current Shifts</h2>
+            </div>
+            <div id="option_view_profile" class="side_option" onclick="workermainpart('view_profile')">
+                <h2>View profile</h2>
+            </div>
+            <div id="option_view_rota" class="side_option" onclick="workermainpart('view_rota')">
+                <h2>View Rota</h2>
+            </div>
+            <div id="option_request_shift" class="side_option" onclick="workermainpart('request_shift')">
+                <h2>Request Shifts</h2>
+            </div>
+
+            <div id="additional_option" class="side_option" onclick="workermainpart('request_shift')" style="display:none">
+                <h2>Additional</h2>
+            </div>
+            
+        </div>
+        <div id="workermainpart" class="mainpart">
+
+        </div>
+
+        <script>
+            window.onload = (event) => {
+                const queryString = window.location.search;
+                const urlParams = new URLSearchParams(queryString);
+                if (urlParams.get('manager') == "true") {
+                    document.querySelector('#sidepart').insertAdjacentHTML(
+        'beforeend',
+        `<div id="option_submit_logistics_report" class="side_option" onclick="workermainpart('submit_logistics_report')">
+        <h2>Submit Logistics Report</h2>
+    </div>`
+      )
+                } else {
+                    console.log("worker");
+                }
+            } 
+
+        </script>
+    </body>
+</html>

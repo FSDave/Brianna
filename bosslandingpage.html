@@ -1,0 +1,39 @@
+<html>
+    <meta charset="utf-8">
+    <head>
+        <link rel="stylesheet" href="assets/styles.css">
+        <link rel="stylesheet" href="assets/landingpagestyles.css">
+        <script src="js/brianna.js"></script>
+    </head>
+    <body>
+        <header id="toppart" class="toppart">
+            <div id="top_right_logo" >
+                <h1>Brianna Admin</h1>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Boss</button>
+                <div class="dropdown-content">
+                  <a href="#">Settings</a>
+                  <a href="briannalogin.html">Sign Out</a>
+                </div>
+              </div>
+            
+        </header>
+        <div id="sidepart" class="sidepart">
+            <div id="option_view_logistics_reports" class="side_option" onclick="bossmainpart('view_logistics_reports')">
+                <span>Logistics Reports</span>
+            </div>
+            <div id="option_manipulate_workstations" class="side_option" onclick="bossmainpart('manipulate_workstations')">
+                <span>Workstations</span>
+            </div>
+            <div id="option_manipulate_workers" class="side_option" onclick="bossmainpart('manipulate_workers')">
+                <span>Workers</span>
+            </div>
+            <div id="option_view_rota" class="side_option" onclick="bossmainpart('view_rota')">
+                <span>Rota</span>
+            </div> 
+        </div>
+        <div id="bossmainpart" class="mainpart">
+        </div>
+    </body>
+</html>

@@ -1,0 +1,17 @@
+
+body{
+    font-family: sans-serif;
+}
+.set_up{
+background-color: #f6f6f6;
+border: #8d8c8a;
+border-radius: 20px;
+color:black;
+text-align: center;
+width:60%;
+margin: auto;
+display: none;
+}
+.displayOn{
+    display: block;  
+}

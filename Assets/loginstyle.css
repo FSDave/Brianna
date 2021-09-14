@@ -1,0 +1,59 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-image:  url('bg.jpg');
+    font: normal normal normal 69%/160% 'Lucida Grande', Verdana, Helvetica, Arial, sans-serif;
+}
+
+.aloginDiv{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    margin:0 auto;
+    padding:40px;
+    background:#191919;
+    text-align: center;
+    width:500px;
+    border-radius: 24px;
+}
+.loginDiv {
+    height: 345px;
+    margin: 0 auto;
+    margin-top: -185px;
+    margin-left: -175px;
+    position: absolute;
+    background-color: #FFFFFF;
+    border: 1px solid #AAA;
+    top: 50%;
+    left: 50%;
+    width: 350px;
+}
+.loginDiv input[type="text"],.loginDiv input[type="password"]{
+    border:0;
+    background:none;
+    display:block;
+    margin: auto;
+    text-align: center;
+    border: 1px solid #AAA;
+    outline:none;
+}
+button{
+    border: 1px solid #AAA;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    cursor: pointer;
+    display: inline-block;
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    line-height: 16px;
+    padding: 4px 10px;
+}
+#buttons{
+    margin-left:25%;
+}
+h1{
+    margin-left:25%;
+}
+

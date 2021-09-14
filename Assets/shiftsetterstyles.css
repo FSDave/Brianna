@@ -1,0 +1,47 @@
+body{
+background-color: white;
+ text-align:center
+}
+table{
+        position: inline;
+        border: 1px solid black;
+        border-collapse: collapse;
+        margin:auto;
+        width:60%;
+    }
+    th{
+        border: 1px solid black;
+        border-collapse: collapse;
+        margin:auto;
+    }
+    td{
+        border: 1px solid black;
+        border-collapse: collapse;
+        margin:auto;
+    }
+    #topbar{
+        position:fixed;
+        height:80px;
+        width:100%;
+        top:0px;
+        background-color: thistle;
+        text-align: center;
+    }
+    #sidebar{
+        position:fixed;
+        width:15%;
+        top:80px;
+        height:auto;
+        background-color: yellowgreen;
+    }
+    #main{
+        position:relative;
+        top:80px;
+    }
+    .time{
+        width:200px;
+        display: inline-block; 
+    }
+    .workerbad{
+        background-color: tomato;
+    }

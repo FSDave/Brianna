@@ -1,0 +1,207 @@
+SELECT * FROM work_posts WHERE work_posts.id ='9'
+UPDATE `work_posts` SET `name` = 'Tabaat', `location` = 'ring road', `shift_manager` = '1', `workers` = '3', `regionId` = '10' WHERE `work_posts`.`id` = '9'
+SELECT * FROM work_posts WHERE work_posts.id ='8'
+UPDATE `work_posts` SET `name` = 'zeitim', `location` = 'abu dis', `shift_manager` = '1', `workers` = '3', `regionId` = '10' WHERE `work_posts`.`id` = '8'
+SELECT * FROM work_posts WHERE work_posts.id ='8'
+UPDATE `work_posts` SET `name` = 'zeitim', `location` = 'abu dis', `shift_manager` = '1', `workers` = '3', `regionId` = '1' WHERE `work_posts`.`id` = '8'
+SELECT workers.first_name, workers.last_name, workers.national_id, address.street_name, address.number, address.city, worker_private_details.phone_number, worker_private_details.additional_details, worker_work_details.postId, worker_work_details.transport, worker_work_details.status, worker_work_details.rank FROM `workers` 
+    JOIN `worker_work_details` ON workers.id = worker_work_details.workerId 
+    JOIN `worker_private_details` ON workers.id = worker_private_details.workerId 
+    JOIN `address` ON workers.id = address.id
+    where workers.id = '10'
+[{"first_name":"David","last_name":"Wellins","national_id":"318468782","street_name":"Nachal Shimshon ","number":"9","city":"Bet Shemesh","phone_number":" 972528113697","additional_details":"Good Dude","postId":"7","transport":"self","status":"active","rank":"worker"}]
+UPDATE `workers` SET `first_name` = 'David', `last_name` = 'Wellins', `national_id` = '318468782' WHERE `workers`.`id` = ''
+UPDATE `address` SET `street_name` = 'Nachal Shimshon ', `number` = '9', `city` = 'Bet Shemesh' WHERE `address`.`id` = ''
+UPDATE `worker_private_details` SET `phone_number` = ' 972528113697', `additional_details` = 'Good Dude' WHERE `worker_private_details`.`workerId` =  ''
+UPDATE `worker_work_details` SET `postId` = '7', `transport` = 'self', `status` = 'active', `rank` = 'worker' WHERE `worker_work_details`.`workerId` =  ''
+SELECT workers.first_name, workers.last_name, workers.national_id, address.street_name, address.number, address.city, worker_private_details.phone_number, worker_private_details.additional_details, worker_work_details.postId, worker_work_details.transport, worker_work_details.status, worker_work_details.rank FROM `workers` 
+    JOIN `worker_work_details` ON workers.id = worker_work_details.workerId 
+    JOIN `worker_private_details` ON workers.id = worker_private_details.workerId 
+    JOIN `address` ON workers.id = address.id
+    where workers.id = '10'
+[{"first_name":"David","last_name":"Wellins","national_id":"318468782","street_name":"Nachal Shimshon ","number":"9","city":"Bet Shemesh","phone_number":" 972528113697","additional_details":"Good Dude","postId":"7","transport":"self","status":"active","rank":"worker"}]
+SELECT * FROM work_posts WHERE work_posts.id ='6'
+UPDATE `work_posts` SET `name` = 'Rachel', `location` = 'beside bethlehem', `shift_manager` = '1', `workers` = '6', `regionId` = '0' WHERE `work_posts`.`id` = '6'
+SELECT * FROM work_posts WHERE work_posts.id ='6'
+UPDATE `work_posts` SET `name` = 'Rachel', `location` = 'beside bethlehem', `shift_manager` = '1', `workers` = '6', `regionId` = '0' WHERE `work_posts`.`id` = '6'
+SELECT * FROM work_posts WHERE work_posts.id ='-1'
+DELETE FROM work_posts WHERE work_posts.id ='17'
+SELECT * FROM work_posts WHERE work_posts.id ='-1'
+SELECT * FROM work_posts WHERE work_posts.id ='-1'
+worker
+SELECT workers.first_name, workers.last_name, workers.national_id, worker_private_details.phone_number, workers_hours.total_shifts, workers_hours.total_hours FROM `workers` 
+    LEFT JOIN `worker_private_details` ON workers.id = worker_private_details.workerId 
+    LEFT JOIN `workers_hours` ON workers.id = workers_hours.id 
+    where workers.id = '10'
+worker
+boss
+worker
+SELECT workers.first_name, workers.last_name, workers.national_id, worker_private_details.phone_number, workers_hours.total_shifts, workers_hours.total_hours FROM `workers` 
+    LEFT JOIN `worker_private_details` ON workers.id = worker_private_details.workerId 
+    LEFT JOIN `workers_hours` ON workers.id = workers_hours.id 
+    where workers.id = '10'
+boss
+SELECT workers.id, workers.first_name, workers.last_name, address.street_name, address.number, address.city, worker_private_details.additional_details, worker_private_details.phone_number
+       FROM workers JOIN worker_private_details ON workers.id = worker_private_details.workerId
+       JOIN address ON workers.id = address.id
+       WHERE workers.id='10'
+SELECT workers.first_name, workers.last_name, workers.national_id, address.street_name, address.number, address.city, worker_private_details.phone_number, worker_private_details.additional_details, worker_work_details.postId, worker_work_details.transport, worker_work_details.status, worker_work_details.rank FROM `workers` 
+    JOIN `worker_work_details` ON workers.id = worker_work_details.workerId 
+    JOIN `worker_private_details` ON workers.id = worker_private_details.workerId 
+    JOIN `address` ON workers.id = address.id
+    where workers.id = '10'
+[{"first_name":"David","last_name":"Wellins","national_id":"318468782","street_name":"Nachal Shimshon ","number":"9","city":"Bet Shemesh","phone_number":" 972528113697","additional_details":"Good Dude","postId":"7","transport":"self","status":"active","rank":"worker"}]
+UPDATE `workers` SET `first_name` = 'David', `last_name` = 'Wellins', `national_id` = '318468782' WHERE `workers`.`id` = ''
+UPDATE `address` SET `street_name` = 'Nachal Shimshon ', `number` = '9', `city` = 'Bet Shemesh' WHERE `address`.`id` = ''
+UPDATE `worker_private_details` SET `phone_number` = ' 972528113697', `additional_details` = 'Good Dude' WHERE `worker_private_details`.`workerId` =  ''
+UPDATE `worker_work_details` SET `postId` = '6', `transport` = 'self', `status` = 'active', `rank` = 'worker' WHERE `worker_work_details`.`workerId` =  ''
+worker
+shift manager
+shift manager
+worker
+worker
+shift manager
+worker
+boss
+boss
+SELECT * FROM work_posts WHERE work_posts.id ='6'
+SELECT * FROM work_posts WHERE work_posts.id ='9'
+SELECT workers.first_name, workers.last_name, work_posts.name, worker_work_details.* FROM `workers` 
+    JOIN `worker_work_details` ON workers.id = worker_work_details.workerId 
+    JOIN `work_posts` ON work_posts.id = worker_work_details.postId
+    where worker_work_details.workerId = '10'
+worker
+SELECT workers.first_name, workers.last_name, workers.national_id, worker_private_details.phone_number, workers_hours.total_shifts, workers_hours.total_hours FROM `workers` 
+    LEFT JOIN `worker_private_details` ON workers.id = worker_private_details.workerId 
+    LEFT JOIN `workers_hours` ON workers.id = workers_hours.id 
+    where workers.id = '10'
+shift manager
+SELECT workers.first_name, workers.last_name, workers.national_id, worker_private_details.phone_number, workers_hours.total_shifts, workers_hours.total_hours FROM `workers` 
+    LEFT JOIN `worker_private_details` ON workers.id = worker_private_details.workerId 
+    LEFT JOIN `workers_hours` ON workers.id = workers_hours.id 
+    where workers.id = '14'
+SELECT workers.first_name, workers.last_name, workers.national_id, worker_private_details.phone_number, workers_hours.total_shifts, workers_hours.total_hours FROM `workers` 
+    LEFT JOIN `worker_private_details` ON workers.id = worker_private_details.workerId 
+    LEFT JOIN `workers_hours` ON workers.id = workers_hours.id 
+    where workers.id = '14'
+SELECT workers.first_name, workers.last_name, workers.national_id, worker_private_details.phone_number, workers_hours.total_shifts, workers_hours.total_hours FROM `workers` 
+    LEFT JOIN `worker_private_details` ON workers.id = worker_private_details.workerId 
+    LEFT JOIN `workers_hours` ON workers.id = workers_hours.id 
+    where workers.id = '14'
+boss
+worker
+SELECT workers.first_name, workers.last_name, workers.national_id, worker_private_details.phone_number, workers_hours.total_shifts, workers_hours.total_hours FROM `workers` 
+    LEFT JOIN `worker_private_details` ON workers.id = worker_private_details.workerId 
+    LEFT JOIN `workers_hours` ON workers.id = workers_hours.id 
+    where workers.id = '10'
+worker
+SELECT workers.first_name, workers.last_name, workers.national_id, worker_private_details.phone_number, workers_hours.total_shifts, workers_hours.total_hours FROM `workers` 
+    LEFT JOIN `worker_private_details` ON workers.id = worker_private_details.workerId 
+    LEFT JOIN `workers_hours` ON workers.id = workers_hours.id 
+    where workers.id = '10'
+worker
+SELECT workers.first_name, workers.last_name, workers.national_id, worker_private_details.phone_number, workers_hours.total_shifts, workers_hours.total_hours FROM `workers` 
+    LEFT JOIN `worker_private_details` ON workers.id = worker_private_details.workerId 
+    LEFT JOIN `workers_hours` ON workers.id = workers_hours.id 
+    where workers.id = ''
+SELECT workers.first_name, workers.last_name, workers.national_id, worker_private_details.phone_number, workers_hours.total_shifts, workers_hours.total_hours FROM `workers` 
+    LEFT JOIN `worker_private_details` ON workers.id = worker_private_details.workerId 
+    LEFT JOIN `workers_hours` ON workers.id = workers_hours.id 
+    where workers.id = ''
+SELECT workers.first_name, workers.last_name, workers.national_id, worker_private_details.phone_number, workers_hours.total_shifts, workers_hours.total_hours FROM `workers` 
+    LEFT JOIN `worker_private_details` ON workers.id = worker_private_details.workerId 
+    LEFT JOIN `workers_hours` ON workers.id = workers_hours.id 
+    where workers.id = ''
+SELECT workers.first_name, workers.last_name, workers.national_id, worker_private_details.phone_number, workers_hours.total_shifts, workers_hours.total_hours FROM `workers` 
+    LEFT JOIN `worker_private_details` ON workers.id = worker_private_details.workerId 
+    LEFT JOIN `workers_hours` ON workers.id = workers_hours.id 
+    where workers.id = ''
+boss
+SELECT * FROM work_posts WHERE work_posts.id ='6'
+worker
+SELECT workers.first_name, workers.last_name, workers.national_id, worker_private_details.phone_number, workers_hours.total_shifts, workers_hours.total_hours FROM `workers` 
+    LEFT JOIN `worker_private_details` ON workers.id = worker_private_details.workerId 
+    LEFT JOIN `workers_hours` ON workers.id = workers_hours.id 
+    where workers.id = '10'
+shift manager
+worker
+SELECT workers.id, workers.first_name, workers.last_name, address.street_name, address.number, address.city, worker_private_details.additional_details, worker_private_details.phone_number
+       FROM workers JOIN worker_private_details ON workers.id = worker_private_details.workerId
+       JOIN address ON workers.id = address.id
+       WHERE workers.id='10'
+SELECT workers.id, workers.first_name, workers.last_name, address.street_name, address.number, address.city, worker_private_details.additional_details, worker_private_details.phone_number
+       FROM workers JOIN worker_private_details ON workers.id = worker_private_details.workerId
+       JOIN address ON workers.id = address.id
+       WHERE workers.id='11'
+SELECT workers.first_name, workers.last_name, work_posts.name, worker_work_details.* FROM `workers` 
+    JOIN `worker_work_details` ON workers.id = worker_work_details.workerId 
+    JOIN `work_posts` ON work_posts.id = worker_work_details.postId
+    where worker_work_details.workerId = '11'
+SELECT * FROM work_posts WHERE work_posts.id ='9'
+SELECT workers.first_name, workers.last_name, workers.national_id, address.street_name, address.number, address.city, worker_private_details.phone_number, worker_private_details.additional_details, worker_work_details.postId, worker_work_details.transport, worker_work_details.status, worker_work_details.rank FROM `workers` 
+    JOIN `worker_work_details` ON workers.id = worker_work_details.workerId 
+    JOIN `worker_private_details` ON workers.id = worker_private_details.workerId 
+    JOIN `address` ON workers.id = address.id
+    where workers.id = '-1'
+[]
+worker
+worker
+SELECT workers.first_name, workers.last_name, workers.national_id, worker_private_details.phone_number, workers_hours.total_shifts, workers_hours.total_hours FROM `workers` 
+    LEFT JOIN `worker_private_details` ON workers.id = worker_private_details.workerId 
+    LEFT JOIN `workers_hours` ON workers.id = workers_hours.id 
+    where workers.id = '10'
+SELECT workers.first_name, workers.last_name, workers.national_id, worker_private_details.phone_number, workers_hours.total_shifts, workers_hours.total_hours FROM `workers` 
+    LEFT JOIN `worker_private_details` ON workers.id = worker_private_details.workerId 
+    LEFT JOIN `workers_hours` ON workers.id = workers_hours.id 
+    where workers.id = '10'
+boss
+boss
+boss
+worker
+SELECT workers.first_name, workers.last_name, workers.national_id, worker_private_details.phone_number, workers_hours.total_shifts, workers_hours.total_hours FROM `workers` 
+    LEFT JOIN `worker_private_details` ON workers.id = worker_private_details.workerId 
+    LEFT JOIN `workers_hours` ON workers.id = workers_hours.id 
+    where workers.id = '10'
+SELECT workers.first_name, workers.last_name, workers.national_id, worker_private_details.phone_number, workers_hours.total_shifts, workers_hours.total_hours FROM `workers` 
+    LEFT JOIN `worker_private_details` ON workers.id = worker_private_details.workerId 
+    LEFT JOIN `workers_hours` ON workers.id = workers_hours.id 
+    where workers.id = ''
+SELECT workers.first_name, workers.last_name, workers.national_id, worker_private_details.phone_number, workers_hours.total_shifts, workers_hours.total_hours FROM `workers` 
+    LEFT JOIN `worker_private_details` ON workers.id = worker_private_details.workerId 
+    LEFT JOIN `workers_hours` ON workers.id = workers_hours.id 
+    where workers.id = ''
+SELECT workers.first_name, workers.last_name, workers.national_id, worker_private_details.phone_number, workers_hours.total_shifts, workers_hours.total_hours FROM `workers` 
+    LEFT JOIN `worker_private_details` ON workers.id = worker_private_details.workerId 
+    LEFT JOIN `workers_hours` ON workers.id = workers_hours.id 
+    where workers.id = ''
+SELECT workers.first_name, workers.last_name, workers.national_id, worker_private_details.phone_number, workers_hours.total_shifts, workers_hours.total_hours FROM `workers` 
+    LEFT JOIN `worker_private_details` ON workers.id = worker_private_details.workerId 
+    LEFT JOIN `workers_hours` ON workers.id = workers_hours.id 
+    where workers.id = ''
+SELECT workers.first_name, workers.last_name, workers.national_id, worker_private_details.phone_number, workers_hours.total_shifts, workers_hours.total_hours FROM `workers` 
+    LEFT JOIN `worker_private_details` ON workers.id = worker_private_details.workerId 
+    LEFT JOIN `workers_hours` ON workers.id = workers_hours.id 
+    where workers.id = ''
+worker
+SELECT workers.first_name, workers.last_name, workers.national_id, worker_private_details.phone_number, workers_hours.total_shifts, workers_hours.total_hours FROM `workers` 
+    LEFT JOIN `worker_private_details` ON workers.id = worker_private_details.workerId 
+    LEFT JOIN `workers_hours` ON workers.id = workers_hours.id 
+    where workers.id = ''
+SELECT workers.first_name, workers.last_name, workers.national_id, worker_private_details.phone_number, workers_hours.total_shifts, workers_hours.total_hours FROM `workers` 
+    LEFT JOIN `worker_private_details` ON workers.id = worker_private_details.workerId 
+    LEFT JOIN `workers_hours` ON workers.id = workers_hours.id 
+    where workers.id = ''
+worker
+worker
+22
+1
+next monday
+INSERT INTO `worker_prefs` (`workerId`, `wdate`, `shiftId`, `regionId`) VALUES ('10', '2021-08-30', '2', '1');
+13
+1
+next sunday
+INSERT INTO `worker_prefs` (`workerId`, `wdate`, `shiftId`, `regionId`) VALUES ('10', '2021-09-05', '3', '1');
+33
+1
+next tuesday
+INSERT INTO `worker_prefs` (`workerId`, `wdate`, `shiftId`, `regionId`) VALUES ('10', '2021-08-31', '3', '1');
